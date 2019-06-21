@@ -1,0 +1,53 @@
+
+
+
+main {
+  flex: 1 0 auto;
+  background-color: #fff59d;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.title {
+  background-color: #ffd92dbe;
+}
+.pageName {
+  background-color: #bbb59dbe;
+}
+
+.col.s12.center{
+  position: relative;
+  top: 30px;
+}
+.form-font{
+  font-size: 80px;
+}
+label[for="email"] {
+  font-size: 20px;
+}
+.top{
+  font-size: 35px;
+  padding: 3px;
+}
+#btn2{
+  font-size: 20px;
+  width: 180px;
+  height: 80px;
+}
+input#email{
+  padding: 5px;
+  width: 220px;
+}
+.text{
+  font-size: 20px;
+}
+
+#link{
+  font-size: 25px;
+}
+#link_top{
+  font-size: 25px;
+  padding-left: 20px;
+}
