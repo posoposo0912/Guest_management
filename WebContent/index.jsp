@@ -29,7 +29,7 @@
 
      <!--ここまで-->
   </nav>
-  <main>
+  <div role="main">
     <br><br>
     <!-- グリッドデザイン -->
     <div class="container">
@@ -48,7 +48,7 @@
       <!-- グリデザ　ここまで -->
 
 	<br><br>
-  </main>
+  </div>
 
  <!--JavaScript at end of body for optimized loading-->
 
