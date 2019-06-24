@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +9,7 @@
  <!--Import materialize.css-->
  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
  <link type="text/css" rel="stylesheet" href="css/background.css"  media="screen,projection"/>
- 
+
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -24,8 +26,8 @@
       </div>
     </div>
 
-            
-     <!--ここまで-->           
+
+     <!--ここまで-->
   </nav>
   <main>
     <br><br>
@@ -35,7 +37,7 @@
             <div class="col s12 center">
             <div class="noshadow" style="background-color: #fff59d; ">
                 <div class="card-content black-text">
-                 
+
                   <p><a class="waves-effect waves-light btn-large orange accent-4" style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative; " href="calender.html">スケジュール</a></p><br/><br/>
                   <p><a class="waves-effect waves-light btn-large teal lighten-1"style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative;  "href="form_AdSelect.html">フォーム</a></p>
                 </div>
@@ -45,8 +47,9 @@
             </div>
       <!-- グリデザ　ここまで -->
 
-    
+	<br><br>
   </main>
+
  <!--JavaScript at end of body for optimized loading-->
 
 <!--フォームに使う-->
@@ -58,7 +61,7 @@
   <div class="container">
     <div class="row">
       <div class="col s6">
-       
+
       </div>
     </div>
   </div>
