@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,34 +27,34 @@
       </div>
     </div>
 
-            
-     <!--ここまで-->           
+
+     <!--ここまで-->
   </nav>
   <main>
-      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>   
+      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>
     <br><br><br>
     <div class="container">
         　<div class="row">
               <div class="col s12 center">
                     <div class="card amber lighten-4">
                             <div class="card-content black-text">
-                         
+
                               <div class="top">送信先入力</div>
                               <br><br><br>
                               <form  method="POST">
-                                <div> 
+                                <div>
                                     <label for="email" >メールアドレス</label><br/>
                                     <br/><input type="mail" id="email" name="email">
                                 </div>
                                 <!----<input type="submit" value="送信"> -->
                                 <br/><br><br><br>
-                                <button type="button" id="btn2" name = "test" onclick="location.href='form_Check.html'">かくにん</button>   
+                                <button type="button" id="btn2" name = "test" onclick="location.href='form_Check.html'">かくにん</button>
                                 </form>
                           </div>
             </div>
       <!-- グリデザ　ここまで -->
 
-    
+
   </main>
  <!--JavaScript at end of body for optimized loading-->
 
