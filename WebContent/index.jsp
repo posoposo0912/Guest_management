@@ -29,7 +29,7 @@
 
      <!--ここまで-->
   </nav>
-  <main>
+  <div role="main">
     <br><br>
     <!-- グリッドデザイン -->
     <div class="container">
@@ -39,7 +39,7 @@
                 <div class="card-content black-text">
 
                   <p><a class="waves-effect waves-light btn-large orange accent-4" style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative; " href="calender.html">スケジュール</a></p><br/><br/>
-                  <p><a class="waves-effect waves-light btn-large teal lighten-1"style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative;  "href="/Form">フォーム</a></p>
+                  <p><a class="waves-effect waves-light btn-large teal lighten-1"style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative;  "href="form_AdSelect.html">フォーム</a></p>
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@
       <!-- グリデザ　ここまで -->
 
 	<br><br>
-  </main>
+  </div>
 
  <!--JavaScript at end of body for optimized loading-->
 
