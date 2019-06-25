@@ -7,8 +7,15 @@
  <!--Import Google Icon Font-->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <!--Import materialize.css-->
- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- <link type="text/css" rel="stylesheet" href="css/background.css"  media="screen,projection"/>
+ <style>
+ <%@ include file="/css/materialize.min.css" %>
+ <%@ include file="/css/background.css" %>
+ </style>
+
+ <!--Import materialize.min.js-->
+<script type="text/javascript">
+<%@ include file="/js/materialize.min.js" %>
+</script>
 
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -55,8 +62,10 @@
 <!--フォームに使う-->
 
   <!--ここまで-->
+  <!--
   <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
+ -->
+ </body>
 <footer class="page-footer orange lighten-2">
   <div class="container">
     <div class="row">
