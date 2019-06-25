@@ -1,7 +1,7 @@
 
 
 
-main {
+div[role=main] {
   flex: 1 0 auto;
   background-color: #fff59d;
 }
