@@ -5,7 +5,6 @@ div[role=main] {
   flex: 1 0 auto;
   background-color: #fff59d;
 }
-
 body {
   display: flex;
   min-height: 100vh;
