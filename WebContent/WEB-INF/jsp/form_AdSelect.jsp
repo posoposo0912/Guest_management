@@ -1,13 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
- <!--Import Google Icon Font-->
+<!--Import Google Icon Font-->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <!--Import materialize.css-->
- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
- <link type="text/css" rel="stylesheet" href="css/background.css"  media="screen,projection"/>
- <!--Let browser know website is optimized for mobile-->
+ <style>
+ <%@ include file="/css/materialize.min.css" %>
+ <%@ include file="/css/background.css" %>
+ </style>
+
+ <!--Import materialize.min.js-->
+<script type="text/javascript">
+<%@ include file="/js/materialize.min.js" %>
+</script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -15,7 +23,7 @@
   <nav>
     <div class="nav-wrapper z-depth-3">
       <div class="container">
-        <a href="/" class="brand-logo" id="iko">ゲスト管理アプリ</a>
+        <a class="brand-logo" id="iko">ゲスト管理アプリ</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="active"><a href="/css/">ヘルプ</a></li>
           <li><a href="/html/">お問い合わせ</a></li>
@@ -28,24 +36,30 @@
   </nav>
   <div role="main">
 
+      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>
     <br><br><br>
     <div class="container">
         　<div class="row">
               <div class="col s12 center">
                     <div class="card amber lighten-4">
                             <div class="card-content black-text">
-                                <div class="top">送信先確認</div><br><br>
-                              <p class="text">メールアドレス：Test-oic@ne.co.jp</p><br/><br/>
-                              <p class="text">送信先区分:保護者</p>
-                            </div>
-                            <div class="card-action">
-                              <a href="form_AdSelect.html" class="yellow-text text-darken-4" id="link">変更する</a>
-                              <a href="form_Finish.html" class="green-text text-darken-4" id="link">送信する</a>
-                            </div>
+
+                              <div class="top">送信先入力</div>
+                              <br><br><br>
+                              <form  method="POST">
+                                <div>
+                                    <label for="email" >メールアドレス</label><br/>
+                                    <br/><input type="email" id="email" name="email">
+                                </div>
+                                <!----<input type="submit" value="送信"> -->
+                                <br/><br><br><br>
+                                <button type="button" id="btn2" name = "test" onclick="location.href='form_Check.html'">かくにん</button>
+                                </form>
                           </div>
-                </div>
             </div>
-       </div>
+          </div>
+        </div>
+      </div>
       <!-- グリデザ　ここまで -->
 
 
@@ -59,6 +73,8 @@
         <div class="col s6">
 
         </div>
+        <div class="col s6">
+        </div>
       </div>
     </div>
     <div class="footer-copyright">
@@ -67,7 +83,7 @@
     </div>
   </footer>
   <!--ここまで-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+
 </body>
 
 </html>
