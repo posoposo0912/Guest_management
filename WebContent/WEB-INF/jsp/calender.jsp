@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -10,15 +10,23 @@
  <style>
  <%@ include file="/css/materialize.min.css" %>
  <%@ include file="/css/background.css" %>
+ <%@ include file="/core/main.css" %>
+ <%@ include file="/daygrid/main.css" %>
+ <%@ include file="/list/main.css" %>
+ <%@ include file="/css/background.css" %>
  </style>
-  <!--Import materialize.min.js-->
- <script  type= "text/javascript">
- <include file="/js/materialize.min.js">
- </script>
-
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+ <script type="text/javascript">
+<%@ include file="/js/materialize.min.js" %>
+<%@ include file="/js/jquery-3.4.1.min.js" %>
+<%@ include file="/core/main.js" %>
+<%@ include file="/daygrid/main.js" %>
+<%@ include file="/interaction/main.js" %>
+<%@ include file="/list/main.js" %>
+<%@ include file="/js/ja.js" %>
+</script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 
@@ -38,7 +46,7 @@
      <!--ここまで-->
   </nav>
 
-   <div role="main">
+  <div role="main">
 
       <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>
     <br><br><br>
@@ -47,23 +55,16 @@
               <div class="col s12 center">
                     <div class="card amber lighten-4">
                             <div class="card-content black-text">
-                                <div class="top">スケジュール確認</div><br><br>
-                              <form  method="POST">
-                                <div>
-                                    <input type="text" class="datepicker">
-                                </div>
-                                <!----<input type="submit" value="送信"> -->
+                                        <div id="calendar">
                                 <br/>
-                                </form>
-                            </div>
-                            <div class="card-action">
-                            </div>
                           </div>
-            </div>
-            </div>
+                          <div id="list"></div>
             </div>
       <!-- グリデザ　ここまで -->
 
+    </div>
+    </div>
+    </div>
   </div>
  <!--JavaScript at end of body for optimized loading-->
 
@@ -81,25 +82,50 @@
       </div>
     </div>
   </footer>
-  <!--ここまで-->
   <script>
       document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
-  });
+    var calendarEl = document.getElementById('calendar');
+     var calendarEl = document.getElementById('list');
 
-  // Or with jQuery
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid','list' ],
+      local:'ja',
+      defaultDate: '2019-06-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: '山田太郎',
+          start: '2019-07-01T10:30:00',
+          end: '2019-07-01T12:30:00'
+        },
 
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-      i18n:{
-        months:["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
-      },
-      format: "yyyy-mm-dd"
+           ]
+
     });
+    var list = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid','list' ],
+      local:'ja',
+      defaultDate: '2019-06-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: '山田太郎',
+          start: '2019-07-01T10:30:00',
+          end: '2019-07-01T12:30:00'
+        },
+
+           ],
+      defaultView: 'listWeek'
+    });
+
+
+
+    calendar.render();
+    list.render();
   });
 
-  </script>
-</body>
+    </script></body>
 
 </html>

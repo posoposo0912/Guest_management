@@ -9,16 +9,13 @@
  <link type="text/css" rel="stylesheet" href="css/background.css"  media="screen,projection"/>
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <script src="js/jquery-3.4.1.min.js"></script>
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 
 <body>
   <nav>
     <div class="nav-wrapper z-depth-3">
       <div class="container">
-        <a class="brand-logo" id="iko">ゲスト管理アプリ</a>
+        <a href="/" class="brand-logo" id="iko">ゲスト管理アプリ</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="active"><a href="/css/">ヘルプ</a></li>
           <li><a href="/html/">お問い合わせ</a></li>
@@ -26,36 +23,33 @@
       </div>
     </div>
 
-            
-     <!--ここまで-->           
+
+     <!--ここまで-->
   </nav>
-   
-  <main>
-    
-      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>   
+  <div role="main">
+
     <br><br><br>
     <div class="container">
         　<div class="row">
               <div class="col s12 center">
                     <div class="card amber lighten-4">
                             <div class="card-content black-text">
-                                <div class="top">スケジュール確認</div><br><br>
-                              <form  method="POST">
-                                <div>
-                                    <input type="text" class="datepicker">
-                                </div>
-                                <!----<input type="submit" value="送信"> -->
-                                <br/>  
-                                </form>
+                                <div class="top">送信先確認</div><br><br>
+                              <p class="text">メールアドレス：Test-oic@ne.co.jp</p><br/><br/>
+                              <p class="text">送信先区分:保護者</p>
                             </div>
                             <div class="card-action">
+                              <a href="form_AdSelect.html" class="yellow-text text-darken-4" id="link">変更する</a>
+                              <a href="form_Finish.html" class="green-text text-darken-4" id="link">送信する</a>
                             </div>
                           </div>
+                </div>
             </div>
+       </div>
       <!-- グリデザ　ここまで -->
 
-    
-  </main>
+
+  </div>
  <!--JavaScript at end of body for optimized loading-->
 
 <!--フォームに使う-->
@@ -63,7 +57,7 @@
     <div class="container">
       <div class="row">
         <div class="col s6">
-        
+
         </div>
       </div>
     </div>
@@ -74,24 +68,6 @@
   </footer>
   <!--ここまで-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
-  });
-
-  // Or with jQuery
-
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-      i18n:{
-        months:["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
-      },
-      format: "yyyy-mm-dd"
-    });
-  });
-          
-  </script>
 </body>
 
 </html>

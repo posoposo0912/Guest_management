@@ -45,7 +45,7 @@
             <div class="noshadow" style="background-color: #fff59d; ">
                 <div class="card-content black-text">
 
-                  <p><a class="waves-effect waves-light btn-large orange accent-4" style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative; " href="/Calender">スケジュール</a></p><br/><br/>
+                  <p><a class="waves-effect waves-light btn-large orange accent-4" style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative; " href="${pageContext.request.contextPath}/Calender">スケジュール</a></p><br/><br/>
                   <p><a class="waves-effect waves-light btn-large teal lighten-1"style="width: 460px; height: 180px;padding: 60px; font-size: 50px;position: relative;  "href="form_AdSelect.html">フォーム</a></p>
                 </div>
               </div>
