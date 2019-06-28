@@ -21,7 +21,7 @@ public class Calender extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String url = "/WEB-INF/jsp/calender.html";
+		String url = "/WEB-INF/jsp/calender.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
