@@ -15,7 +15,7 @@
  <script  type= "text/javascript">
  <include file="/js/materialize.min.js">
  </script>
- 
+
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -34,13 +34,13 @@
       </div>
     </div>
 
-            
-     <!--ここまで-->           
+
+     <!--ここまで-->
   </nav>
-   
+
    <div role="main">
-    
-      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>   
+
+      <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>
     <br><br><br>
     <div class="container">
         　<div class="row">
@@ -53,7 +53,7 @@
                                     <input type="text" class="datepicker">
                                 </div>
                                 <!----<input type="submit" value="送信"> -->
-                                <br/>  
+                                <br/>
                                 </form>
                             </div>
                             <div class="card-action">
@@ -63,7 +63,7 @@
             </div>
             </div>
       <!-- グリデザ　ここまで -->
-     
+
   </div>
  <!--JavaScript at end of body for optimized loading-->
 
@@ -72,7 +72,7 @@
     <div class="container">
       <div class="row">
         <div class="col s6">
-        
+
         </div>
       </div>
     </div>
@@ -82,7 +82,6 @@
     </div>
   </footer>
   <!--ここまで-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
       document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.datepicker');
@@ -99,7 +98,7 @@
       format: "yyyy-mm-dd"
     });
   });
-          
+
   </script>
 </body>
 
