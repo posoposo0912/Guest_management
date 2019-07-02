@@ -6,7 +6,7 @@
     <meta charset="utf-8"/>
  <!--Import Google Icon Font-->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <!--Import materialize.css-->
+ <!--マテリアルデザイン・カレンダー用CSSの読み込み-->
  <style>
  <%@ include file="/css/materialize.min.css" %>
  <%@ include file="/css/background.css" %>
@@ -17,6 +17,7 @@
  </style>
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <!-- マテリアル系統・カレンダー部分JS読み込み -->
  <script type="text/javascript">
 <%@ include file="/js/materialize.min.js" %>
 <%@ include file="/js/jquery-3.4.1.min.js" %>
@@ -25,7 +26,71 @@
 <%@ include file="/interaction/main.js" %>
 <%@ include file="/list/main.js" %>
 <%@ include file="/js/ja.js" %>
+<%@ include file="/timegrid/main.js" %>
+
 </script>
+
+<!--fullCalender関連 -->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script>
+
+     document.addEventListener('DOMContentLoaded', function() {
+
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+       locale: 'es',
+      plugins: [ 'interaction','dayGrid', 'timeGrid','list'],
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      },
+      defaultDate: '2019-06-12',
+      navLinks: true, // can click day/week names to navigate views
+      selectable: true,
+      selectMirror: true,
+      select: function(arg) {
+        var title = prompt('Event Title:');
+        if (title) {
+          calendar.addEvent({
+            title: title,
+            start: arg.start,
+            end: arg.end,
+            allDay: arg.allDay
+          })
+        }
+        calendar.unselect()
+      },
+      editable: true,
+      eventLimit: true,
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2019-06-01'
+        },
+        {
+          title: '山田太郎',
+          start: '2019-06-07',
+          end: '2019-06-10'
+        }
+        ]
+    });
+    calendar.setOption('locale', 'ja');
+    calendar.render();
+
+
+    localeSelectorEl.addEventListener('change', function() {
+      if (this.value) {
+        calendar.setOption('locale', this.value);
+      }
+});
+  });
+
+
+    </script>
+
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -82,50 +147,7 @@
       </div>
     </div>
   </footer>
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-     var calendarEl = document.getElementById('list');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid','list' ],
-      local:'ja',
-      defaultDate: '2019-06-12',
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: '山田太郎',
-          start: '2019-07-01T10:30:00',
-          end: '2019-07-01T12:30:00'
-        },
-
-           ]
-
-    });
-    var list = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ 'interaction', 'dayGrid','list' ],
-      local:'ja',
-      defaultDate: '2019-06-12',
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: '山田太郎',
-          start: '2019-07-01T10:30:00',
-          end: '2019-07-01T12:30:00'
-        },
-
-           ],
-      defaultView: 'listWeek'
-    });
-
-
-
-    calendar.render();
-    list.render();
-  });
-
-    </script></body>
+  </div>
+</body>
 
 </html>
