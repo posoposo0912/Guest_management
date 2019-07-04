@@ -121,7 +121,8 @@ form > div > div:before, form > div > div:after {
     content: " ";
     clear: both;
 }
-form >div input[type=tel], form >div input[type=time], form > div input[type=date], form > div input[type=text], form > div input[type=email], form > div textarea, form > div select {
+form >div input[type=tel], form >div input[type=time], form > div input[type=date], form >
+div input[type=text], form > div input[type=email], form > div textarea, form > div select {
     display: block;
     min-width: 405px;
     max-width: 405px;
@@ -163,6 +164,33 @@ form >div input[type=tel], form >div input[type=time], form > div input[type=dat
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     margin: 0 15px;
 }
+.ui-datepicker-trigger {
+     margin-left:-9px;
+     margin-top: 3px;
+}
+
+#day input[name="day"]{
+	display: block;
+    min-width: 100px;
+    max-width: 100px;
+    float: left;
+    height: 38px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin: 0 15px;
+}
+
 #eat .eat2{
 	position: relative;
 	left: -9px;
