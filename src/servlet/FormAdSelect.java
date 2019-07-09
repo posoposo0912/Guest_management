@@ -1,4 +1,4 @@
-package mailForm.servlet;
+package servlet;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import mailForm.dao.MailFormDAO;
-import mailForm.model.MailForm;
+import dao.MailFormDAO;
+import model.MailForm;
 
 /**
  * Servlet implementation class FromAdSelect
@@ -31,12 +31,12 @@ public class FormAdSelect extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// FIXME mailƒtƒH[ƒ}ƒbƒg‚ÌƒNƒ‰ƒX‚ğg‚¤
+		// FIXME mailï¿½tï¿½Hï¿½[ï¿½}ï¿½bï¿½gï¿½ÌƒNï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½gï¿½ï¿½
 		String email = request.getParameter("email");
 		MailForm mailForm = new MailForm();
 		mailForm.setEmail(email);
 		
-		// DB sql “Š‚°‚é
+		// DB sql ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		MailFormDAO mfd = new MailFormDAO();
 		if(mfd.create(mailForm)) {
 			System.out.println("insert ok !");

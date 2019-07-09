@@ -1,7 +1,7 @@
-package mailForm.model;
+package model;
 
 public class MailForm {
-	// FIXME email Œ`Ž®‚ÅƒNƒ‰ƒX‚ðŽg‚¤
+	// FIXME email ï¿½`ï¿½ï¿½ï¿½ÅƒNï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½gï¿½ï¿½
 	public String email;
 
 	/**
