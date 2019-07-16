@@ -24,7 +24,9 @@ public class MailFormDAO {
 			e.printStackTrace();
 		}
 		// ???f???[???^???x???[???X???????
-		try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS)) {
+		Connection conn = null;
+		try  {
+			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
 			System.out.println("MySQL???????????????????????????????B");
 
@@ -43,6 +45,13 @@ public class MailFormDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
+		} finally {
+			try { // ??????
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+			}
 		}
 		return true;
 	}
