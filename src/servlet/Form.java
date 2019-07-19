@@ -22,7 +22,7 @@ public class Form extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, IOException {
 		
-		System.out.println("aaaaaaa");
+
 		String url = "/WEB-INF/jsp/form_AdSelect.jsp";
 		RequestDispatcher dispatcher = 
 				request.getRequestDispatcher(url);
