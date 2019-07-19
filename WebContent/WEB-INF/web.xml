@@ -41,13 +41,21 @@
 	</servlet-mapping>
 	<servlet>
 		<description></description>
-		<display-name>/</display-name>
 		<servlet-name>Main</servlet-name>
 		<servlet-class>servlet.Main</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Main</servlet-name>
 		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<servlet-name>Form_Check</servlet-name>
+		<servlet-class>servlet.form_Check</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Form_Check</servlet-name>
+		<url-pattern>/Form_Check</url-pattern>
 	</servlet-mapping>
 
 	<!-- Tomcat 65535 bytes limit  -->
