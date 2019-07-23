@@ -22,6 +22,9 @@ public class Form extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 	throws ServletException, IOException {
 		
+		//初回フラグ
+	       int first_flg = 0;
+	       request.setAttribute("first_flg",first_flg);
 
 		String url = "/WEB-INF/jsp/form_AdSelect.jsp";
 		RequestDispatcher dispatcher = 
@@ -37,7 +40,18 @@ public class Form extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		    doGet(request, response);
+		
+		
+		//初回フラグ
+	       int first_flg = 1;
+	       request.setAttribute("first_flg",first_flg);
+		
+		
+		String url = "/WEB-INF/jsp/form_AdSelect.jsp";
+		RequestDispatcher dispatcher = 
+				request.getRequestDispatcher(url);
+		dispatcher.forward(request,response);    
+		
 	}
 
 }
