@@ -13,7 +13,7 @@
  <%@ include file="/core/main.css" %>
  <%@ include file="/daygrid/main.css" %>
  <%@ include file="/list/main.css" %>
- <%@ include file="/css/background.css" %>
+ <%@ include file="/timegrid/main.css" %>
  </style>
  <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,28 +25,47 @@
 <%@ include file="/daygrid/main.js" %>
 <%@ include file="/interaction/main.js" %>
 <%@ include file="/list/main.js" %>
-<%@ include file="/js/ja.js" %>
+<%@ include file="/core/locales-all.js" %>
 <%@ include file="/timegrid/main.js" %>
 
 </script>
 
 <!--fullCalender関連 -->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
 
   <script>
+//matelializeにおいてselectを正しく認識されるように
+
 
      document.addEventListener('DOMContentLoaded', function() {
 
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
-       locale: 'es',
+       locale: 'en',
+
       plugins: [ 'interaction','dayGrid', 'timeGrid','list'],
       header: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+
       },
+      buttonText: {
+    	  prev: "前",
+          next: "次",
+          today: "今日",
+          month: "月",
+          week: "週",
+          day: "日",
+          list: "予定リスト"
+      },
+      weekLabel: "週",
+      allDayText: "終日",
+      eventLimitText: function (n) {
+          return "他 " + n + " 件";
+      },
+      noEventsMessage: "表示する予定はありません",
+
       defaultDate: '2019-06-12',
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
@@ -77,21 +96,12 @@
         }
         ]
     });
-    calendar.setOption('locale', 'ja');
     calendar.render();
-
-
-    localeSelectorEl.addEventListener('change', function() {
-      if (this.value) {
-        calendar.setOption('locale', this.value);
-      }
-});
   });
 
 
-    </script>
 
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </script>
 </head>
 
 
@@ -113,6 +123,7 @@
 
   <div role="main">
 
+<!-- return prev page -->
       <button type="button" id="btn2" name = "test" onclick="location.href='topPage.html'">戻る</button>
     <br><br><br>
     <div class="container">
@@ -120,12 +131,10 @@
               <div class="col s12 center">
                     <div class="card amber lighten-4">
                             <div class="card-content black-text">
-                                        <div id="calendar">
-                                <br/>
+                          <div id="calendar">
                           </div>
-                          <div id="list"></div>
             </div>
-      <!-- グリデザ　ここまで -->
+      <!-- グリデザ ここまで -->
 
     </div>
     </div>
@@ -143,8 +152,7 @@
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-      </div>
+
     </div>
   </footer>
   </div>
