@@ -39,6 +39,7 @@
 		<servlet-name>FormAdSelect</servlet-name>
 		<url-pattern>/FormAdSelect</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
 		<description></description>
 		<servlet-name>Main</servlet-name>
@@ -48,17 +49,50 @@
 		<servlet-name>Main</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
 	<servlet>
-		<description></description>
 		<servlet-name>Form_Check</servlet-name>
-		<servlet-class>servlet.form_Check</servlet-class>
+		<servlet-class>servlet.Form_Check</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Form_Check</servlet-name>
 		<url-pattern>/Form_Check</url-pattern>
 	</servlet-mapping>
 
-	<!-- Tomcat 65535 bytes limit  -->
+	<servlet>
+		<description></description>
+		<servlet-name>FormDAO</servlet-name>
+		<servlet-class>dao.FormDAO</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FormDAO</servlet-name>
+		<url-pattern>/FormDAO</url-pattern>
+	</servlet-mapping>
+
+	<!-- 入力フォーム確認画面 -->
+	<servlet>
+		<description></description>
+		<servlet-name>Formkakunin</servlet-name>
+		<servlet-class>servlet.Formkakunin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Formkakunin</servlet-name>
+		<url-pattern>/Formkakunin</url-pattern>
+	</servlet-mapping>
+
+	<!-- 入力フォーム最終確認画面 -->
+	<servlet>
+		<description></description>
+		<servlet-name>Formkakuninn</servlet-name>
+		<servlet-class>servlet.Formkakuninn</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Formkakuninn</servlet-name>
+		<url-pattern>/Formkakuninn</url-pattern>
+	</servlet-mapping>
+
+	<!-- Tomcat 65535 bytes limit -->
+	<!-- 送信されるファイルのデータ量が多いからこれで回避 -->
 	<servlet>
 		<servlet-name>jsp</servlet-name>
 		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
