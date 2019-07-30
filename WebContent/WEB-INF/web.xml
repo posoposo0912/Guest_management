@@ -1,114 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
 	xmlns="http://java.sun.com/xml/ns/javaee"
+
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+
 	id="WebApp_ID" version="2.5">
+
 	<welcome-file-list>
+
 		<welcome-file>index.html</welcome-file>
+
 		<welcome-file>index.htm</welcome-file>
+
 		<welcome-file>index.jsp</welcome-file>
+
 		<welcome-file>default.html</welcome-file>
+
 		<welcome-file>default.htm</welcome-file>
+
 		<welcome-file>default.jsp</welcome-file>
+
 	</welcome-file-list>
+
 	<servlet>
+
 		<description></description>
+
 		<servlet-name>Calender</servlet-name>
+
 		<servlet-class>servlet.Calender</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>Calender</servlet-name>
+
 		<url-pattern>/Calender</url-pattern>
+
 	</servlet-mapping>
+
 	<servlet>
+
 		<description></description>
+
 		<display-name>Form</display-name>
+
 		<servlet-name>Form</servlet-name>
+
 		<servlet-class>servlet.Form</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>Form</servlet-name>
+
 		<url-pattern>/Form</url-pattern>
+
 	</servlet-mapping>
+
 	<servlet>
+
 		<description></description>
+
 		<servlet-name>FormAdSelect</servlet-name>
+
 		<servlet-class>servlet.FormAdSelect</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>FormAdSelect</servlet-name>
+
 		<url-pattern>/FormAdSelect</url-pattern>
+
 	</servlet-mapping>
 
+
+
 	<servlet>
+
 		<description></description>
+
 		<servlet-name>Main</servlet-name>
+
 		<servlet-class>servlet.Main</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>Main</servlet-name>
+
 		<url-pattern>/</url-pattern>
+
 	</servlet-mapping>
 
+
+
 	<servlet>
+
 		<servlet-name>Form_Check</servlet-name>
+
 		<servlet-class>servlet.Form_Check</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>Form_Check</servlet-name>
+
 		<url-pattern>/Form_Check</url-pattern>
+
 	</servlet-mapping>
 
+
+
 	<servlet>
+
 		<description></description>
+
 		<servlet-name>FormDAO</servlet-name>
+
 		<servlet-class>dao.FormDAO</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
+
 		<servlet-name>FormDAO</servlet-name>
+
 		<url-pattern>/FormDAO</url-pattern>
+
+	</servlet-mapping>
+
+	<!-- 入力フォームトップ画面 -->
+	
+	<servlet>
+
+		<description></description>
+
+		<servlet-name>Input</servlet-name>
+
+		<servlet-class>servlet.Input</servlet-class>
+
+	</servlet>
+
+	<servlet-mapping>
+
+		<servlet-name>Input</servlet-name>
+
+		<url-pattern>/Input</url-pattern>
+
 	</servlet-mapping>
 
 	<!-- 入力フォーム確認画面 -->
+
 	<servlet>
+
 		<description></description>
-		<servlet-name>Formkakunin</servlet-name>
-		<servlet-class>servlet.Formkakunin</servlet-class>
+
+		<servlet-name>Confirmation_screen</servlet-name>
+
+		<servlet-class>servlet.Confirmation_screen</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
-		<servlet-name>Formkakunin</servlet-name>
-		<url-pattern>/Formkakunin</url-pattern>
+
+		<servlet-name>Confirmation_screen</servlet-name>
+
+		<url-pattern>/Confirmation_screen</url-pattern>
+
 	</servlet-mapping>
+
+
 
 	<!-- 入力フォーム最終確認画面 -->
+
 	<servlet>
+
 		<description></description>
-		<servlet-name>Formkakuninn</servlet-name>
-		<servlet-class>servlet.Formkakuninn</servlet-class>
+
+		<servlet-name>Send_Finish</servlet-name>
+
+		<servlet-class>servlet.Send_Finish</servlet-class>
+
 	</servlet>
+
 	<servlet-mapping>
-		<servlet-name>Formkakuninn</servlet-name>
-		<url-pattern>/Formkakuninn</url-pattern>
+
+		<servlet-name>Send_Finish</servlet-name>
+
+		<url-pattern>/Send_Finish</url-pattern>
+
 	</servlet-mapping>
 
+
+
 	<!-- Tomcat 65535 bytes limit -->
+
 	<!-- 送信されるファイルのデータ量が多いからこれで回避 -->
+
 	<servlet>
+
 		<servlet-name>jsp</servlet-name>
+
 		<servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
+
 		<init-param>
+
 			<param-name>fork</param-name>
+
 			<param-value>false</param-value>
+
 		</init-param>
+
 		<init-param>
+
 			<param-name>mappedfile</param-name>
+
 			<param-value>false</param-value>
+
 		</init-param>
+
 		<init-param>
+
 			<param-name>xpoweredBy</param-name>
+
 			<param-value>false</param-value>
+
 		</init-param>
+
 		<load-on-startup>3</load-on-startup>
+
 	</servlet>
+
+
 
 </web-app>
